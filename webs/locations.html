@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div data-gjs="navbar" class="navbar">
+        <div class="navbar-container">
+            <a href="/" class="navbar-brand"></a>
+            <div id="iluvmh" class="navbar-burger">
+                <div class="navbar-burger-line"></div>
+                <div class="navbar-burger-line"></div>
+                <div class="navbar-burger-line"></div>
+            </div>
+            <div data-gjs="navbar-items" class="navbar-items-c">
+                <nav data-gjs="navbar-menu" class="navbar-menu">
+                    <a href="index.html" class="navbar-menu-link">Home</a>
+                    <a href="aboutus.html" class="navbar-menu-link">About us</a>
+                    <a href="contactus.html" class="navbar-menu-link">Contact us</a>
+                    <a href="menu.html" class="navbar-menu-link">Menu</a>
+                    <a href="locations.html" class="navbar-menu-link">Locations</a>
+                    <a href="addinformation.html" class="navbar-menu-link">Add Information</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <section class="bdg-sect">
+        <h1 class="heading">Our Locations</h1>
+        <span class="c5432"></span>
+        <p class="paragraph">
+            <div>Delhi</div>
+            <div>London</div>
+            <div>Sydney</div>
+            <div>Dubai</div>
+            <div>California</div>
+            <div>Bangkok</div>
+        </p>
+        <iframe frameborder="0" class="c5230" src="https://maps.google.com/maps?&z=1&t=q&output=embed"></iframe>
+    </section>
+    <br>
+    <br>
+    <img class="c6907" src="./img/work-desk.jpg" />
+    <script>
+        var items = document.querySelectorAll('#iluvmh');
+        for (var i = 0, len = items.length; i < len; i++) {
+            (function () {
+                var e, t = 0,
+                    n = function () {
+                        var e, t = document.createElement("void"),
+                            n = {
+                                transition: "transitionend",
+                                OTransition: "oTransitionEnd",
+                                MozTransition: "transitionend",
+                                WebkitTransition: "webkitTransitionEnd"
+                            };
+                        for (e in n)
+                            if (void 0 !== t.style[e]) return n[e]
+                    }(),
+                    r = function (e) {
+                        var t = window.getComputedStyle(e),
+                            n = t.display,
+                            r = (t.position, t.visibility, t.height, parseInt(t["max-height"]));
+                        if ("none" !== n && "0" !== r) return e.offsetHeight;
+                        e.style.height = "auto", e.style.display = "block", e.style.position = "absolute", e.style.visibility =
+                            "hidden";
+                        var i = e.offsetHeight;
+                        return e.style.height = "", e.style.display = "", e.style.position = "", e.style.visibility =
+                            "", i
+                    },
+                    i = function (e) {
+                        t = 1;
+                        var n = r(e),
+                            i = e.style;
+                        i.display = "block", i.transition = "max-height 0.25s ease-in-out", i.overflowY = "hidden",
+                            "" == i["max-height"] && (i["max-height"] = 0), 0 == parseInt(i["max-height"]) ? (i[
+                                "max-height"] = "0", setTimeout(function () {
+                                i["max-height"] = n + "px"
+                            }, 10)) : i["max-height"] = "0"
+                    },
+                    a = function (r) {
+                        if (r.preventDefault(), !t) {
+                            var a = this.closest("[data-gjs=navbar]"),
+                                o = a.querySelector("[data-gjs=navbar-items]");
+                            i(o), e || (o.addEventListener(n, function () {
+                                t = 0;
+                                var e = o.style;
+                                0 == parseInt(e["max-height"]) && (e.display = "", e["max-height"] = "")
+                            }), e = 1)
+                        }
+                    };
+                "gjs-collapse" in this || this.addEventListener("click", a), this["gjs-collapse"] = 1
+            }.bind(items[i]))();
+        }
+    </script>
+</body>
+<html>

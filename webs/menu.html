@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+        <div data-gjs="navbar" class="navbar">
+                <div class="navbar-container">
+                    <a href="/" class="navbar-brand"></a>
+                    <div id="iluvmh" class="navbar-burger">
+                        <div class="navbar-burger-line"></div>
+                        <div class="navbar-burger-line"></div>
+                        <div class="navbar-burger-line"></div>
+                    </div>
+                    <div data-gjs="navbar-items" class="navbar-items-c">
+                        <nav data-gjs="navbar-menu" class="navbar-menu">
+                            <a href="index.html" class="navbar-menu-link">Home</a>
+                            <a href="aboutus.html" class="navbar-menu-link">About us</a>
+                            <a href="contactus.html" class="navbar-menu-link">Contact us</a>
+                            <a href="menu.html" class="navbar-menu-link">Menu</a>
+                            <a href="locations.html" class="navbar-menu-link">Locations</a>
+                            <a href="addinformation.html" class="navbar-menu-link">Add Information</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+    <section class="bdg-sect">
+        <h1 class="heading">Menu</h1>
+        <span class="c5432"></span>
+        <p class="paragraph">
+            <p id="iqrs7w" class="c5503">Foodies take note! The best local ingredients are on the menu here at Hook & Plow for breakfast, lunch, and dinner.
+                From a healthy or hearty breakfast, to a light or luscious lunch, or a simply divine dinner, no one serves
+                up the Pacific Northwest better than we do.</p>
+            <p id="ibxbji" class="c5511">
+                <br/>
+            </p>
+            <p id="i9du2i" class="c5527">Breakfast</p>
+            <p id="i6y7oe" class="c5535">BREAKFAST BUFFET 30 Wilcox Farm Cage Free Eggs, House Smoked Salmon, Local Sausage, Bacon, Breakfast Potatoes,
+                Steel Cut Oatmeal, House Made Granola, Pike Place Market Fruit, Fresh Baked Pastries & Cinnamon Rolls Our
+                Local Grand Central Baking Breads & Blazing Bagels Made to Order Omelets, Pancakes & Waffles</p>
+            <p id="ig0e9i"
+                class="c5543">
+                <br/>
+            </p>
+            <p id="ipty0g" class="c5559">Lunch</p>
+            <p id="i3u5pv" class="c5567">Snacks House Potato Chips 2 Salt Roasted Mixed Nuts 5 Garlic Humus 9 torn herb focaccia, caramelized onions Fries
+                5 chili lime aioli Stone Flatbreads Forest Mushrooms 14 mozzarella, toasted pine nuts, arugula Roma Tomatoes
+                14 goat cheese, caramelized onions, arugula Cheese & Pepperoni 15 Fish & Chips 19 Ling cod, Pikeâ€™s Brewery
+                batter, fries, tartar sauce Kale Pasta 19 butternut squash, crispy mushrooms, pumpkin seed pesto Pan Roasted
+                Skuna Bay Salmon* 24 lemon herb risotto, orange dill jus, arugula salad Entrees Soup & Salad add to any salad
+                grilled chicken 6 sautÃ©ed prawns 8 | seared salmon* 9 Market Soup 9 Razor Clam Chowder 10 smoked bacon,
+                leek, onion, celery Waterfront Chop Salad 15 house smoked salmon, lettuce, garbanzo beans, Beecherâ€™s cheddar,
+                tomato, apple cider vinaigrette Caesar Salad 11 herb croutons, reggiano, anchovy House Salad 10 baby greens,
+                pear, Big Boy blue cheese, candied pecans, cranberries, sherry vinaigrette Share Creamy â€œBeecherâ€™sâ€
+                Spinach Dip 9 torn herb focaccia, parmesan Firecracker Seafood 12 fried calamari, rock shrimp, chili lime
+                aioli Shrimp Tacos 15 rock shrimp, cabbage, pico de gallo, chili lime aioli, corn tortillas</p>
+            <p id="iib5jr"
+                class="c5575">
+                <br/>
+            </p>
+            <p id="i4kc97" class="c5591">Dinner</p>
+            <p id="ipmg16" class="c5599">Snacks House Potato Chips 2 Salt Roasted Mixed Nuts 5 Garlic Humus 9 torn herb focaccia, caramelized onions Fries
+                5 chili lime aioliÂ </p>
+        </p>
+    </section>
+
+    <br>
+    <br>
+    <img class="c6907" src="./img/work-desk.jpg" />
+    <script>
+        var items = document.querySelectorAll('#iluvmh');
+        for (var i = 0, len = items.length; i < len; i++) {
+            (function () {
+                var e, t = 0,
+                    n = function () {
+                        var e, t = document.createElement("void"),
+                            n = {
+                                transition: "transitionend",
+                                OTransition: "oTransitionEnd",
+                                MozTransition: "transitionend",
+                                WebkitTransition: "webkitTransitionEnd"
+                            };
+                        for (e in n)
+                            if (void 0 !== t.style[e]) return n[e]
+                    }(),
+                    r = function (e) {
+                        var t = window.getComputedStyle(e),
+                            n = t.display,
+                            r = (t.position, t.visibility, t.height, parseInt(t["max-height"]));
+                        if ("none" !== n && "0" !== r) return e.offsetHeight;
+                        e.style.height = "auto", e.style.display = "block", e.style.position = "absolute", e.style.visibility =
+                            "hidden";
+                        var i = e.offsetHeight;
+                        return e.style.height = "", e.style.display = "", e.style.position = "", e.style.visibility =
+                            "", i
+                    },
+                    i = function (e) {
+                        t = 1;
+                        var n = r(e),
+                            i = e.style;
+                        i.display = "block", i.transition = "max-height 0.25s ease-in-out", i.overflowY = "hidden",
+                            "" == i["max-height"] && (i["max-height"] = 0), 0 == parseInt(i["max-height"]) ? (i[
+                                "max-height"] = "0", setTimeout(function () {
+                                i["max-height"] = n + "px"
+                            }, 10)) : i["max-height"] = "0"
+                    },
+                    a = function (r) {
+                        if (r.preventDefault(), !t) {
+                            var a = this.closest("[data-gjs=navbar]"),
+                                o = a.querySelector("[data-gjs=navbar-items]");
+                            i(o), e || (o.addEventListener(n, function () {
+                                t = 0;
+                                var e = o.style;
+                                0 == parseInt(e["max-height"]) && (e.display = "", e["max-height"] = "")
+                            }), e = 1)
+                        }
+                    };
+                "gjs-collapse" in this || this.addEventListener("click", a), this["gjs-collapse"] = 1
+            }.bind(items[i]))();
+        }
+    </script>
+</body>
+<html>
